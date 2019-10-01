@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"reflect"
 	"log"
 	"net/http"
         "net/url"
@@ -76,7 +75,6 @@ func getOneEvent(w http.ResponseWriter, r *http.Request) {
 			json.NewEncoder(w).Encode(singleEvent)
 		}
 	}
-	fmt.Println(reflect.TypeOf(singleEvent))
 }
 
 func getAllManager(w http.ResponseWriter, r *http.Request) {
